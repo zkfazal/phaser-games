@@ -1,42 +1,39 @@
-# Phaser esbuild TypeScript Template
+# Welcome to Brutal Brawl!
 
-This is a Phaser 3 project template that uses esbuild for bundling. It supports hot-reloading for quick development workflow, includes TypeScript support and scripts to generate production-ready builds.
+Brutal Brawl is a passion project deisgned to emulate Street Fighter using the Phaser 3 physics engine. It aims to copy the mechanics of Street Fighter while using two-dimensional spritesheets in order to provide fast-paced action.
 
-**[This Template is also available as a JavaScript version.](https://github.com/phaserjs/template-esbuild)**
+![TitleScreen](Brutal_Brawl_title_screen.PNG)
 
-### Versions
+The project uses a Phaser + EsBuild + TypeScript template, courtesy of Phaser. You can download the template [here](https://phaser.io/news/2024/02/phaser-esbuild-typescript-template).
 
-This template has been updated for:
+Features of the template include:
 
-- [Phaser 3.80.1](https://github.com/phaserjs/phaser)
-- [esbuild 0.20.1](https://github.com/evanw/esbuild)
-- [TypeScript 5.3.3](https://github.com/microsoft/TypeScript)
+1. Instant, automatic rebuilding of an app upon changes being made.
+1. Quick transitioning from production to deployment
+1. Type checking through TypeScript
 
-![screenshot](screenshot.png)
+## Running the game locally
 
-## Requirements
+In order to run the game locally, you'll first need to have [Node.js](https://nodejs.org) installed, which allows you to run scripts through `npm`.
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
-
-## Available Commands
-
+Here is a basic list of commands that you can use npm for:
 | Command | Description |
-|---------|-------------|
+| --------------- | ---------------------------------------------- |
 | `npm install` | Install project dependencies |
 | `npm run dev` | Launch a development web server |
 | `npm run build` | Create a production build in the `dist` folder |
 
-## Writing Code
+To run the game, simply run the following commands in a terminal:
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm run dev`.
+1. Run `npm install` in the root directory of the project
+2. Run `npm run dev` to launch the web server
+3. Navigate to `http://localhost:8080` in any web browser. Firefox or Google Chrome is recommended.
 
-The local development server runs on `http://localhost:8080` by default. Please see the esbuild documentation if you wish to change this, or add SSL support.
-
-Once the server is running you can edit any of the files in the `src` folder. esbuild will automatically recompile your code and then reload the browser.
+You can then edit any files under the `src` directory to see live changes happen in your browser.
 
 ## Template Project Structure
 
-We have provided a default project structure to get you started. This is as follows:
+The project structure is as follows:
 
 - `public/index.html` - A basic HTML page to contain the game.
 - `src` - Contains the game source code.
@@ -46,58 +43,14 @@ We have provided a default project structure to get you started. This is as foll
 - `public/style.css` - Some simple CSS rules to help with page layout.
 - `public/assets` - Contains the static assets used by the game.
 
-## Handling Assets
+## Kanban Board
 
-esbuild supports loading assets via JavaScript module `import` statements (not recommended).
+A Kanban Board listing all the To-Do tasks is here. Note that this is for my convenience, so that I can actually plan this out before diving in without a plan.
 
-This template provides support for both embedding assets and also loading them from a static folder. To embed an asset, you can import it at the top of the JavaScript file you are using it in:
+## Accessing the game:
 
-```js
-import logoImg from './logo.png'
-```
+To access the game, simply go [here](https://zkfazal.github.io/phaser-games/)
 
-To load static files such as audio files, videos, etc place them into the `public/assets` folder. Then you can use this path in the Loader calls within Phaser:
+## Code and Other Stuff That Looks Useful
 
-```js
-preload ()
-{
-    //  This is an example of an imported bundled image.
-    //  Remember to import it at the top of this file
-    this.load.image('logo', logoImg);
-
-    //  This is an example of loading a static image
-    //  from the public/assets folder:
-    this.load.image('background', 'assets/bg.png');
-}
-```
-
-When you issue the `npm run build` command, all static assets are automatically copied to the `dist/assets` folder.
-
-## Deploying to Production
-
-After you run the `npm run build` command, your code will be built into a single bundle and saved to the `dist` folder, along with any other assets your project imported, or stored in the public assets folder.
-
-In order to deploy your game, you will need to upload *all* of the contents of the `dist` folder to a public facing web server.
-
-## Customizing the Template
-
-### esbuild
-
-If you want to customize your build, such as adding plugin (i.e. for loading CSS or fonts), you can modify the `esbuild/build.prod.mjs` and `esbuild/dev.server.mjs` files for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json`. Please see the [esbuild documentation](https://esbuild.github.io/api/) for more information.
-
-## Join the Phaser Community!
-
-We love to see what developers like you create with Phaser! It really motivates us to keep improving. So please join our community and show-off your work 😄
-
-**Visit:** The [Phaser website](https://phaser.io) and follow on [Phaser Twitter](https://twitter.com/phaser_)<br />
-**Play:** Some of the amazing games [#madewithphaser](https://twitter.com/search?q=%23madewithphaser&src=typed_query&f=live)<br />
-**Learn:** [API Docs](https://newdocs.phaser.io), [Support Forum](https://phaser.discourse.group/) and [StackOverflow](https://stackoverflow.com/questions/tagged/phaser-framework)<br />
-**Discord:** Join us on [Discord](https://discord.gg/phaser)<br />
-**Code:** 2000+ [Examples](https://labs.phaser.io)<br />
-**Read:** The [Phaser World](https://phaser.io/community/newsletter) Newsletter<br />
-
-Created by [Phaser Studio](mailto:support@phaser.io). Powered by coffee, anime, pixels and love.
-
-The Phaser logo and characters are &copy; 2011 - 2024 Phaser Studio Inc.
-
-All rights reserved.
+A list of potentially useful code will be dumped [here](references.html)
