@@ -33,6 +33,20 @@ export class Preloader extends Scene
         this.load.setPath('assets');
 
         this.load.image('logo', 'logo.png');
+
+        // Add the feamle brawler assets:
+        this.load.multiatlas('female_brawler', 'female_brawler.json');
+
+        // Add the title scene background
+        this.load.image('mainmenu_001', 'titleScene/mainmenu_001.gif');
+        this.load.image('mainmenu_002', 'titleScene/mainmenu_002.gif');
+        this.load.image('mainmenu_003', 'titleScene/mainmenu_003.gif');
+        this.load.image('mainmenu_004', 'titleScene/mainmenu_004.gif');
+
+        // Add the font files. This is mainly for the title screen to make it look cool
+        this.load.font("dragon_tff", "fonts/dragon.ttf");
+        this.load.font("dragon_woff", "fonts/dragon.woff");
+        // this.load.font("dragon_woff2", "fonts/dragon.woff2");
     }
 
     create ()
@@ -43,4 +57,13 @@ export class Preloader extends Scene
         //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
         this.scene.start('MainMenu');
     }
+
+    // loadFont(name: string, url: string): Promise<any> {
+    //     const newFont = new FontFace(name, `url(${url})`);
+    //     return newFont.load().then((loaded: any) => {
+    //         document.fonts.add(loaded);
+    //     }).catch((error: any) => {
+    //         return error;
+    //     });
+    // }
 }

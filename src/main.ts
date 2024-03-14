@@ -1,3 +1,6 @@
+import PhaserMatterCollisionPlugin from 'phaser-matter-collision-plugin';
+import { FontLoaderPlugin, FontFile } from './plugins/font_loader_plugin';
+
 import { Boot } from './scenes/Boot';
 import { Game as MainGame } from './scenes/Game';
 import { GameOver } from './scenes/GameOver';
@@ -10,13 +13,38 @@ import { Game, Types } from "phaser";
 //  https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config: Types.Core.GameConfig = {
     type: Phaser.AUTO,
-    width: 1024,
-    height: 768,
+    width: 1200,
+    height: 720,
     parent: 'game-container',
     backgroundColor: '#028af8',
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+    physics: {
+        default: "matter",
+        matter: {
+            debug: true
+        }
+    },
+    plugins: {
+        scene: [
+          {
+            plugin: PhaserMatterCollisionPlugin, // The plugin class
+            key: "matterCollision", // Where to store in Scene.Systems, e.g. scene.sys.matterCollision
+            mapping: "matterCollision" // Where to store in the Scene, e.g. scene.matterCollision
+          }
+        ],
+        global: [
+            {
+                key: 'FontLoaderPlugin',
+                plugin: FontLoaderPlugin,
+                start: true
+            } 
+        ]
+    },
+    input: {
+        gamepad: true
     },
     scene: [
         Boot,
