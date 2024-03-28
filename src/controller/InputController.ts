@@ -1,10 +1,10 @@
 import MergedInput from "../../node_modules/phaser3-merged-input/src/main";
 
 export class InputController extends Phaser.Scene {
-    debugScene: Phaser.Scene;
-    public player1: any;
-    public player2: any;
-    mergedInput: MergedInput;
+    debugScene?: Phaser.Scene;
+    public player1?: any;
+    public player2?: any;
+    mergedInput?: MergedInput;
     /**
     * The Input scene is designed to run in the background and handle input.
     * We're thus able to reference the MergedInput plugin instance on this scene from multiple scenes within our project.
@@ -17,7 +17,7 @@ export class InputController extends Phaser.Scene {
         super({key: 'InputController'});
     }
 
-    preload() {
+    preload?() {
         // Merged input plugin
         this.load.scenePlugin('mergedInput', MergedInput);
 
@@ -31,7 +31,7 @@ export class InputController extends Phaser.Scene {
     /**
      *  @protected
      */
-    create() {
+    create?() {
        // Setup player objects
         this.player1 = this.mergedInput.addPlayer(0);
         this.player2 = this.mergedInput.addPlayer(1);
@@ -78,10 +78,4 @@ export class InputController extends Phaser.Scene {
             .defineKey(1, 'B9', 'NUMPAD_ZERO')
             ;
     }
-
-    /**
-     * We could handle input events in this scene's update method, or reference the instance of MergedInput from other scenes.
-     **/ 
-	update(){
-	}
 }

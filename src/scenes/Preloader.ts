@@ -47,6 +47,8 @@ export class Preloader extends Scene
         this.load.font("dragon_tff", "fonts/dragon.ttf");
         this.load.font("dragon_woff", "fonts/dragon.woff");
         // this.load.font("dragon_woff2", "fonts/dragon.woff2");
+
+        this.scene.launch('InputController');
     }
 
     create ()
@@ -57,13 +59,4 @@ export class Preloader extends Scene
         //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
         this.scene.start('MainMenu');
     }
-
-    // loadFont(name: string, url: string): Promise<any> {
-    //     const newFont = new FontFace(name, `url(${url})`);
-    //     return newFont.load().then((loaded: any) => {
-    //         document.fonts.add(loaded);
-    //     }).catch((error: any) => {
-    //         return error;
-    //     });
-    // }
 }

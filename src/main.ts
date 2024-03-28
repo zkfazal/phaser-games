@@ -1,6 +1,9 @@
 import PhaserMatterCollisionPlugin from 'phaser-matter-collision-plugin';
 import { FontLoaderPlugin, FontFile } from './plugins/font_loader_plugin';
 
+import MergedInput from 'phaser3-merged-input';
+import { InputController } from './controller/InputController'
+
 import { Boot } from './scenes/Boot';
 import { Game as MainGame } from './scenes/Game';
 import { GameOver } from './scenes/GameOver';
@@ -33,7 +36,12 @@ const config: Types.Core.GameConfig = {
             plugin: PhaserMatterCollisionPlugin, // The plugin class
             key: "matterCollision", // Where to store in Scene.Systems, e.g. scene.sys.matterCollision
             mapping: "matterCollision" // Where to store in the Scene, e.g. scene.matterCollision
-          }
+          },
+          {
+            key: "mergedInput",
+            plugin: MergedInput,
+            mapping: "mergedInput",
+          },
         ],
         global: [
             {
@@ -48,6 +56,7 @@ const config: Types.Core.GameConfig = {
     },
     scene: [
         Boot,
+        InputController,
         Preloader,
         MainMenu,
         MainGame,
