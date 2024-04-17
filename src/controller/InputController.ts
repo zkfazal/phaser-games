@@ -1,4 +1,4 @@
-import MergedInput from "../../node_modules/phaser3-merged-input/src/main";
+import MergedInput from 'phaser3-merged-input';
 
 export class InputController extends Phaser.Scene {
     debugScene?: Phaser.Scene;
@@ -33,15 +33,14 @@ export class InputController extends Phaser.Scene {
      */
     create?() {
        // Setup player objects
-        this.player1 = this.mergedInput.addPlayer(0);
-        this.player2 = this.mergedInput.addPlayer(1);
+        this.player1 = this.mergedInput?.addPlayer(0);
+        this.player2 = this.mergedInput?.addPlayer(1);
         
         /**
          * Define keys (player, action, key, append)
          * This scene would also be a good place to handle updates of key definitions, so that a player can redefine keys or gamepad mappings.
          */
-		this.mergedInput
-			.defineKey(0, 'UP', 'W')
+		this.mergedInput?.defineKey(0, 'UP', 'W')
 			.defineKey(0, 'DOWN', 'S')
 			.defineKey(0, 'LEFT', 'A')
             .defineKey(0, 'RIGHT', 'D')

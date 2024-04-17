@@ -37,11 +37,11 @@ const config: Types.Core.GameConfig = {
             key: "matterCollision", // Where to store in Scene.Systems, e.g. scene.sys.matterCollision
             mapping: "matterCollision" // Where to store in the Scene, e.g. scene.matterCollision
           },
-          {
-            key: "mergedInput",
-            plugin: MergedInput,
-            mapping: "mergedInput",
-          },
+        //   {
+        //     key: "mergedInput",
+        //     plugin: MergedInput,
+        //     mapping: "mergedInput",
+        //   },
         ],
         global: [
             {
