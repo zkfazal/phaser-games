@@ -118,7 +118,7 @@ export class MainMenu extends Scene
 
     confirmSelection()
     {
-        console.log('uwu')
+        console.log('confirmed selection')
         this.scene.start('Game');
     }
 

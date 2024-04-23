@@ -47,9 +47,11 @@ The project structure is as follows:
 
 A Kanban Board listing all the To-Do tasks is here. Note that this is for my convenience, so that I can actually plan this out before diving in without a plan.
 
+To access the Kanban board, simply go [here](public/kanban/index.html)
+
 ## Accessing the game:
 
-To access the game, simply go [here](https://zkfazal.github.io/phaser-games/)
+To access the game, simply go [here](index.html)
 
 ## Code and Other Stuff That Looks Useful
 
