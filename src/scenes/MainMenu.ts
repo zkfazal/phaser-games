@@ -1,6 +1,7 @@
 import { Scene, GameObjects } from 'phaser';
 import MergedInput, { Player } from 'phaser3-merged-input';
 import { InputController } from '../controller/InputController';
+import { FFighter } from '../player/FFighter';
 
 export class MainMenu extends Scene
 {

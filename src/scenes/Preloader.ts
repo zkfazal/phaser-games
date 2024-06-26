@@ -35,7 +35,8 @@ export class Preloader extends Scene
         this.load.image('logo', 'logo.png');
 
         // Add the feamle brawler assets:
-        this.load.multiatlas('female_brawler', 'female_brawler.json');
+        this.load.multiatlas('female_brawler', 'cammy.json');
+        this.load.json('female_brawler_shapes', 'female_brawler_shapes.json');
 
         // Add the title scene background
         this.load.image('mainmenu_001', 'titleScene/mainmenu_001.gif');
@@ -47,6 +48,16 @@ export class Preloader extends Scene
         this.load.font("dragon_tff", "fonts/dragon.ttf");
         this.load.font("dragon_woff", "fonts/dragon.woff");
         // this.load.font("dragon_woff2", "fonts/dragon.woff2");
+
+        // Add the first level background
+        this.load.image('level1_001', 'level1/level1_001.gif');
+        this.load.image('level1_002', 'level1/level1_002.gif');
+        this.load.image('level1_003', 'level1/level1_003.gif');
+        this.load.image('level1_004', 'level1/level1_004.gif');
+        this.load.image('level1_005', 'level1/level1_005.gif');
+        this.load.image('level1_006', 'level1/level1_006.gif');
+        this.load.image('level1_007', 'level1/level1_007.gif');
+        this.load.image('level1_008', 'level1/level1_008.gif');
 
         this.scene.launch('InputController');
     }
